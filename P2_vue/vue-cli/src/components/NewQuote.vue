@@ -22,7 +22,12 @@ export default {
     };
   },
   methods: {
-    createNew() {}
+    createNew() {
+      //$emit() :Trigger an event on the current instance.
+      //Any additional arguments will be passed into the listener’s callback function.
+      this.$emit("quoteAdded", this.quote);
+      this.quote = "";
+    }
   }
 };
 </script>
